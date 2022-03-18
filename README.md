@@ -1,6 +1,16 @@
-# ОСНОВЫ ВЫЧИСЛИТЕЛЬНОЙ БИОЛОГИИ И БИОИНФОРМАТИКИ (10-22 марта 2022)
+# МОДУЛЬ "ФИЛОГЕНОМИКА"<br/>
+ОСНОВЫ ВЫЧИСЛИТЕЛЬНОЙ БИОЛОГИИ И БИОИНФОРМАТИКИ (10-22 марта 2022)
 
-## ПРАКТИКА #1. ФИЛОГЕНОМИКА: ВЫРАВНИВАНИЕ ПОСЛЕДОВАТЕЛЬНОСТЕЙ
+## СОДЕРЖАНИЕ
+* [ПРАКТИКА #1.](https://github.com/vinni-bio/SIRIUS-PHYLO/blob/master/INSTRUCTIONS/DAY01_25NOV19_LINUX.md) ВЫРАВНИВАНИЕ ПОСЛЕДОВАТЕЛЬНОСТЕЙ
+* [ПРАКТИКА #2.](https://github.com/vinni-bio/SIRIUS-PHYLO/blob/master/INSTRUCTIONS/DAY02_02DEC19_BASH.md) ВЫБОР МОДЕЛИ И ПОСТРОЕНИЕ ФИЛОГЕНЕТИЧЕСКИХ ДЕРЕВЬЕВ
+
+## ПРИЛОЖЕНИЯ
+* [ПРИЛОЖЕНИЕ]((https://github.com/vinni-bio/SIRIUS-PHYLO/blob/master/) БАЗЫ ГЕНЕТИЧЕСКИХ ДАННЫХ 
+* [ПРИЛОЖЕНИЕ]((https://github.com/vinni-bio/SIRIUS-PHYLO/blob/master/) БАЗЫ ДАННЫХ NCBI
+* [ПРИЛОЖЕНИЕ]((https://github.com/vinni-bio/SIRIUS-PHYLO/blob/master/) ПОЛЯ ЗАПРОСОВ ПОИСКА NCBI
+
+## ПРАКТИКА #1. ВЫРАВНИВАНИЕ ПОСЛЕДОВАТЕЛЬНОСТЕЙ
 
 ### НЕОБХОДИМЫЕ ПРОГРАММЫ
 * Текстовый редактор [SUBLIME TEXT 3](https://www.sublimetext.com/3) ИЛИ [Notepad++](https://notepad-plus-plus.org/downloads/) (только Windows)
@@ -90,8 +100,13 @@ alt="BLAST" width="360" border="5" />
 3. В меню поиска, введите:<br/>
 `name:"interphotoreceptor retinoid binding” AND taxonomy:”Ursidae”`
 
+## ПРАКТИКА #2. ФИЛОГЕНОМИКА: ВЫБОР МОДЕЛИ И ПОСТРОЕНИЕ ФИЛОГЕНЕТИЧЕСКИХ ДЕРЕВЬЕВ
+
+
 
 ## ПРИЛОЖЕНИЕ
+
+### БАЗЫ ГЕНЕТИЧЕСКИХ ДАННЫХ
 * [INSDC: International Nucleotide Sequence Database Collaboration](http://www.insdc.org/)
 * [NCBI: National Center for Biotechnology Information](http://www.ncbi.nlm.nih.gov/)
 * [EMBL: European Molecular Biology Laboratory](http://www.embl.org/)
@@ -152,7 +167,7 @@ alt="BLAST" width="360" border="5" />
 | [`toolkit`](https://www.ncbi.nlm.nih.gov/toolkit) | Программы |
 
 
-### ПОЛЯ ЗАПРОСОВ NCBI
+### ПОЛЯ ЗАПРОСОВ ПОИСКА NCBI
 
 | Имя Поля  | Аббревиатура | Функция | Базы NCBI |
 | --------- | --------- | --------- | --------- | 
@@ -190,5 +205,6 @@ alt="BLAST" width="360" border="5" />
 | `[Title/Abstract]` | `[TIAB]` | Заголовок/абстракт | PubMed |
 | `[Volume]` | `[VOL]` | Том | Все |
 | `[Unique identifier]` | `[UID]` | Уникальный номер записи | Все |
+
 
 
