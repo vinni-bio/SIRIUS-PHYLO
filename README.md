@@ -2,13 +2,11 @@
 ОСНОВЫ ВЫЧИСЛИТЕЛЬНОЙ БИОЛОГИИ И БИОИНФОРМАТИКИ (10-22 марта 2022)
 
 ## СОДЕРЖАНИЕ
-* [ПРАКТИКА #1.](https://github.com/vinni-bio/SIRIUS-PHYLO/blob/master/INSTRUCTIONS/DAY01_25NOV19_LINUX.md) ВЫРАВНИВАНИЕ ПОСЛЕДОВАТЕЛЬНОСТЕЙ
+* [ПРАКТИКА #1.](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0-1-%D0%B2%D1%8B%D1%80%D0%B0%D0%B2%D0%BD%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B5%D0%B9) ВЫРАВНИВАНИЕ ПОСЛЕДОВАТЕЛЬНОСТЕЙ
 * [ПРАКТИКА #2.](https://github.com/vinni-bio/SIRIUS-PHYLO/blob/master/INSTRUCTIONS/DAY02_02DEC19_BASH.md) ВЫБОР МОДЕЛИ И ПОСТРОЕНИЕ ФИЛОГЕНЕТИЧЕСКИХ ДЕРЕВЬЕВ
-
-## ПРИЛОЖЕНИЯ
-* [ПРИЛОЖЕНИЕ]((https://github.com/vinni-bio/SIRIUS-PHYLO/blob/master/) БАЗЫ ГЕНЕТИЧЕСКИХ ДАННЫХ 
-* [ПРИЛОЖЕНИЕ]((https://github.com/vinni-bio/SIRIUS-PHYLO/blob/master/) БАЗЫ ДАННЫХ NCBI
-* [ПРИЛОЖЕНИЕ]((https://github.com/vinni-bio/SIRIUS-PHYLO/blob/master/) ПОЛЯ ЗАПРОСОВ ПОИСКА NCBI
+* [ПРИЛОЖЕНИЕ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B1%D0%B0%D0%B7%D1%8B-%D0%B3%D0%B5%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85) БАЗЫ ГЕНЕТИЧЕСКИХ ДАННЫХ 
+* [ПРИЛОЖЕНИЕ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B1%D0%B0%D0%B7%D1%8B-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-ncbi) БАЗЫ ДАННЫХ NCBI
+* [ПРИЛОЖЕНИЕ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%BF%D0%BE%D0%BB%D1%8F-%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D0%BE%D0%B2-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0-ncbi) ПОЛЯ ЗАПРОСОВ ПОИСКА NCBI
 
 ## ПРАКТИКА #1. ВЫРАВНИВАНИЕ ПОСЛЕДОВАТЕЛЬНОСТЕЙ
 
@@ -100,7 +98,7 @@ alt="BLAST" width="360" border="5" />
 3. В меню поиска, введите:<br/>
 `name:"interphotoreceptor retinoid binding” AND taxonomy:”Ursidae”`
 
-## ПРАКТИКА #2. ФИЛОГЕНОМИКА: ВЫБОР МОДЕЛИ И ПОСТРОЕНИЕ ФИЛОГЕНЕТИЧЕСКИХ ДЕРЕВЬЕВ
+## ПРАКТИКА #2. ВЫБОР МОДЕЛИ И ПОСТРОЕНИЕ ФИЛОГЕНЕТИЧЕСКИХ ДЕРЕВЬЕВ
 
 
 
