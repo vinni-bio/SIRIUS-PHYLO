@@ -267,7 +267,7 @@ alt="BLAST" width="360" border="5" />
 ![ML дерево, построенное в RAxML](https://github.com/vinni-bio/WS-20160909/blob/master/LAB2/bears_ML.png)
 
 ### 2Ж. БАЙЕСОВСКИЙ АНАЛИЗ в MrBayes (BI - bayesian inference)
-0. Установите **MrBayes**
+0. Установите [**MrBayes**](https://nbisweden.github.io/MrBayes/download.html)
 1. Запустите **MrBayes** через `mb` в терминале Mac Os или просто запуском *mrbayes.exe* в Windows
 2. Чтобы читать справку `MrBayes` введите `help`
 3. Загрузите [файл](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.nex) с выровненными последовательностями:<br/>
@@ -304,6 +304,10 @@ MrBayes > sumt</code></pre>
 `MrBayes > quit`
 15. Откройте консенсусное дерево [bears.nex.con.tre](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.nex.con.tre) in FigTree
 ![Байесовское дерево, построенное в MrBayes](https://github.com/vinni-bio/WS-20160909/blob/master/LAB2/bears_BA.png)
+
+#### ЗАДАНИЯ (ПОСТРОЕНИЕ ФИЛОГЕНЕТИЧЕСКИХ ДЕРЕВЬЕВ):
+  * Как различаются построенные MP, NJ, ML и BI деревья по топологии и по поддержке?
+  * Какой метод построения филогенетического дерева вы бы предпочли как наиболее достоверный? 
 
 ## ПРИЛОЖЕНИЯ
 
