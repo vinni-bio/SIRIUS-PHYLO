@@ -5,8 +5,8 @@
 * [ПРАКТИКА #1.](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0-1-%D0%B2%D1%8B%D1%80%D0%B0%D0%B2%D0%BD%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B5%D0%B9) ВЫРАВНИВАНИЕ ПОСЛЕДОВАТЕЛЬНОСТЕЙ
 * [ПРАКТИКА #2.](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0-2-%D0%B2%D1%8B%D0%B1%D0%BE%D1%80-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8-%D0%B8-%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5-%D1%84%D0%B8%D0%BB%D0%BE%D0%B3%D0%B5%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D1%8C%D0%B5%D0%B2) ВЫБОР МОДЕЛИ И ПОСТРОЕНИЕ ФИЛОГЕНЕТИЧЕСКИХ ДЕРЕВЬЕВ
   1. [ЗАДАНИЯ: МАКСИМАЛЬНАЯ ПАРСИМОНИЯ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BC%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%BF%D0%B0%D1%80%D1%81%D0%B8%D0%BC%D0%BE%D0%BD%D0%B8%D1%8F)
-  2. [ЗАДАНИЯ: ДИСТАНЦИОННЫЕ МЕТОДЫ](https://github.com/vinni-bio/WS-20160909#homework-questions-distance-matrix-methods)
-  3. [ЗАДАНИЯ: ВЫБОР ЭВОЛЮЦИОННОЙ МОДЕЛИ](https://github.com/vinni-bio/WS-20160909#homework-questions-model-selection)
+  2. [ЗАДАНИЯ: ДИСТАНЦИОННЫЕ МЕТОДЫ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B4%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D1%8B)
+  3. [ЗАДАНИЯ: ВЫБОР МОДЕЛИ НУКЛЕОТИДНЫХ ЗАМЕН](https://github.com/vinni-bio/WS-20160909#homework-questions-model-selection)
   4. [ЗАДАНИЯ: ВЫБОР PARTITIONS](https://github.com/vinni-bio/WS-20160909#homework-questions-partition-analysis)
   5. [ЗАДАНИЯ: ПОСТРОЕНИЕ ДЕРЕВЬЕВ](https://github.com/vinni-bio/WS-20160909#homework-questions-likelihood-and-bayesian-methods)
 * [ПРИЛОЖЕНИЕ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B1%D0%B0%D0%B7%D1%8B-%D0%B3%D0%B5%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85) БАЗЫ ГЕНЕТИЧЕСКИХ ДАННЫХ 
@@ -159,7 +159,24 @@ alt="BLAST" width="360" border="5" />
   * Как различаются топологии и поддержка ветвей между MP и NJ деревьями?
   * Повторите NJ анализ для каждого гена отдельно (используйте файлы *.fasta). Как различаются топологии деревьев и поддержки ветвей между генными деревьями?
 
+### 2Г. Выбор модели нуклеотидных замен в jModelTest
+1. Откройте программу [jModelTest.jar](https://github.com/ddarriba/jmodeltest2/releases)
+2. Загрузите файл с выравниванием для гена *cytb*: [cytb.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb.nex)
+3. В верхнем меню **Analysis**, выберите **_Compute Likelihood scores_**
+4. Выберите поиск в 7 схемах нуклеотидных замен и запустите анализ
+5. В верхнем меню **Analysis** выберите критерий **AIC**, **AICc**, **BIC** или **DT** (можно выбирать последовательно)
+6. В верхнем меню **Results** выберите **_Show results table_**
+7. Отсортируйте результаты по **AICc** критерию в соответствующей колонке
+8. Выберите наиболее подходящую модель нуклеотидных замен по меньшему значению критерия
+9. Проверьте параметры оптимальной модели нуклеотидных замен
+10. ПОВТОРИТЕ всю процедуру для гена *irbp*: [irbp.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp.nex)
 
+#### ЗАДАНИЯ (ВЫБОР МОДЕЛИ НУКЛЕОТИДНЫХ ЗАМЕН):
+  * Все ли критерии поддерживают одну и ту же модель нуклеотидных замен?
+  * Если нет, то по каким параметрам различаются выбранные оптимальные модели?
+  * Сравните оптимальную модель по критерию **AICc** со следующей за ней моделью. Как сильно различаются они по поддержке? Посмотрите на значение **delta**. По каким параметрам эти модели различаются?
+  * Какую модель нуклеотидных замен вы выбрали для последующей реконструкции филогенетического дерева? Постарайтесь объяснить почему.
+  * Как различаются выбранные модели нуклеотидных замен для генов *irbp* и *cytb*?
 
 ## ПРИЛОЖЕНИЯ
 
