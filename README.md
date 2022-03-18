@@ -8,7 +8,7 @@
   2. [ЗАДАНИЯ: ДИСТАНЦИОННЫЕ МЕТОДЫ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B4%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D1%8B)
   3. [ЗАДАНИЯ: ВЫБОР МОДЕЛИ НУКЛЕОТИДНЫХ ЗАМЕН](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B2%D1%8B%D0%B1%D0%BE%D1%80-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8-%D0%BD%D1%83%D0%BA%D0%BB%D0%B5%D0%BE%D1%82%D0%B8%D0%B4%D0%BD%D1%8B%D1%85-%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD)
   4. [ЗАДАНИЯ: ПОИСК ОПТИМАЛЬНОГО РАЗДЕЛА](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D0%BE%D0%BF%D1%82%D0%B8%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE-%D1%80%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%D0%B0)
-  5. [ЗАДАНИЯ: ПОСТРОЕНИЕ ФИЛОГЕНЕТИЧЕСКИХ ДЕРЕВЬЕВ](https://github.com/vinni-bio/WS-20160909#homework-questions-likelihood-and-bayesian-methods)
+  5. [ЗАДАНИЯ: ПОСТРОЕНИЕ ФИЛОГЕНЕТИЧЕСКИХ ДЕРЕВЬЕВ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5-%D1%84%D0%B8%D0%BB%D0%BE%D0%B3%D0%B5%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D1%8C%D0%B5%D0%B2)
 * [ПРИЛОЖЕНИЕ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B1%D0%B0%D0%B7%D1%8B-%D0%B3%D0%B5%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85) БАЗЫ ГЕНЕТИЧЕСКИХ ДАННЫХ 
 * [ПРИЛОЖЕНИЕ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B1%D0%B0%D0%B7%D1%8B-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-ncbi) БАЗЫ ДАННЫХ NCBI
 * [ПРИЛОЖЕНИЕ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%BF%D0%BE%D0%BB%D1%8F-%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D0%BE%D0%B2-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0-ncbi) ПОЛЯ ЗАПРОСОВ ПОИСКА NCBI
@@ -111,6 +111,7 @@ alt="BLAST" width="360" border="5" />
 * [PartitionFinder v2.1.1](https://github.com/brettc/partitionfinder/releases/tag/v2.1.1)
 * [MrBayes v.3.2.7](https://nbisweden.github.io/MrBayes/download.html)
 * [FigTree v.1.4.4](https://github.com/rambaut/figtree/releases)
+* [RAxML HPC v.8.2.10](https://github.com/stamatak/standard-RAxML) (опционально)
 
 ### РЕГИСТРАЦИЯ В CIPRES
 * портал [CIPRES: Cyberinfrastructure for Phylogenetic Research](https://www.phylo.org/)
@@ -178,7 +179,7 @@ alt="BLAST" width="360" border="5" />
   * Какую модель нуклеотидных замен вы выбрали для последующей реконструкции филогенетического дерева? Постарайтесь объяснить почему.
   * Как различаются выбранные модели нуклеотидных замен для генов *irbp* и *cytb*?
 
-### 2Д. ПОИСК ОПТИМАЛЬНОГО РАЗДЕЛА в [PartitionFinder](https://github.com/brettc/partitionfinder/releases/tag/v2.1.1)
+### 2Д. Поиск оптимального раздела в [PartitionFinder](https://github.com/brettc/partitionfinder/releases/tag/v2.1.1)
 1. Откройте папку `partitionfinder-2.1.1/examples/nucleotide/` и скопируйте из нее файл `partition_finder.cfg` в вашу рабочую директорию
 2. Откройте файл  `partition_finder.cfg` в текстовом редакторе (например, Notepad++ или SUBLIME)
 3. Измените `test.phy` в `bears.phy` (ваш файл с выравниванием)
@@ -206,7 +207,7 @@ alt="BLAST" width="360" border="5" />
   * Сколько оптимальных разделов было выбрано для исследуемой матрицы выравнивания?
   * Как соотносятся оптимальные модели нуклеотидных замен выбранных разделов с теми, что были выбраны для генов в jmodeltest?
 
-### 2Е. МЕТОД МАКСИМАЛЬНОГО ПРАВДОПОДОБИЯ (ML - Maximum Likelihood Analysis) в RAxML
+### 2Е. Метод максимального правдоподобия (ML - Maximum Likelihood Analysis) в RAxML
 
 <p><b>Руководство для запуска RAxML из командной строки:</b></p>
 
@@ -266,7 +267,7 @@ alt="BLAST" width="360" border="5" />
 30. Сохраните дерево [RAxML_bipartitions.bears_final](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/RAxML_bipartitions.bears_final.txt) и откройте его в FigTree <br/>
 ![ML дерево, построенное в RAxML](https://github.com/vinni-bio/WS-20160909/blob/master/LAB2/bears_ML.png)
 
-### 2Ж. БАЙЕСОВСКИЙ АНАЛИЗ в MrBayes (BI - bayesian inference)
+### 2Ж. Байесовский анализ в MrBayes (BI - bayesian inference)
 0. Установите [**MrBayes**](https://nbisweden.github.io/MrBayes/download.html)
 1. Запустите **MrBayes** через `mb` в терминале Mac Os или просто запуском *mrbayes.exe* в Windows
 2. Чтобы читать справку `MrBayes` введите `help`
