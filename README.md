@@ -4,11 +4,11 @@
 ## СОДЕРЖАНИЕ
 * [ПРАКТИКА #1.](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0-1-%D0%B2%D1%8B%D1%80%D0%B0%D0%B2%D0%BD%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B5%D0%B9) ВЫРАВНИВАНИЕ ПОСЛЕДОВАТЕЛЬНОСТЕЙ
 * [ПРАКТИКА #2.](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0-2-%D0%B2%D1%8B%D0%B1%D0%BE%D1%80-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8-%D0%B8-%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5-%D1%84%D0%B8%D0%BB%D0%BE%D0%B3%D0%B5%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D1%8C%D0%B5%D0%B2) ВЫБОР МОДЕЛИ И ПОСТРОЕНИЕ ФИЛОГЕНЕТИЧЕСКИХ ДЕРЕВЬЕВ
-  1. [ДЗ МАКСИМАЛЬНАЯ ПАРСИМОНИЯ](https://github.com/vinni-bio/WS-20160909#homework-questions-maximum-parsimony)
-  2. [ДЗ ДИСТАНЦИОННЫЕ МЕТОДЫ](https://github.com/vinni-bio/WS-20160909#homework-questions-distance-matrix-methods)
-  3. [ДЗ ВЫБОР ЭВОЛЮЦИОННОЙ МОДЕЛИ](https://github.com/vinni-bio/WS-20160909#homework-questions-model-selection)
-  4. [ДЗ ВЫБОР PARTITIONS](https://github.com/vinni-bio/WS-20160909#homework-questions-partition-analysis)
-  5. [ДЗ ПОСТРОЕНИЕ ДЕРЕВЬЕВ](https://github.com/vinni-bio/WS-20160909#homework-questions-likelihood-and-bayesian-methods)
+  1. [ЗАДАНИЯ: МАКСИМАЛЬНАЯ ПАРСИМОНИЯ](https://github.com/vinni-bio/WS-20160909#homework-questions-maximum-parsimony)
+  2. [ЗАДАНИЯ: ДИСТАНЦИОННЫЕ МЕТОДЫ](https://github.com/vinni-bio/WS-20160909#homework-questions-distance-matrix-methods)
+  3. [ЗАДАНИЯ: ВЫБОР ЭВОЛЮЦИОННОЙ МОДЕЛИ](https://github.com/vinni-bio/WS-20160909#homework-questions-model-selection)
+  4. [ЗАДАНИЯ: ВЫБОР PARTITIONS](https://github.com/vinni-bio/WS-20160909#homework-questions-partition-analysis)
+  5. [ЗАДАНИЯ: ПОСТРОЕНИЕ ДЕРЕВЬЕВ](https://github.com/vinni-bio/WS-20160909#homework-questions-likelihood-and-bayesian-methods)
 * [ПРИЛОЖЕНИЕ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B1%D0%B0%D0%B7%D1%8B-%D0%B3%D0%B5%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85) БАЗЫ ГЕНЕТИЧЕСКИХ ДАННЫХ 
 * [ПРИЛОЖЕНИЕ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B1%D0%B0%D0%B7%D1%8B-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-ncbi) БАЗЫ ДАННЫХ NCBI
 * [ПРИЛОЖЕНИЕ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%BF%D0%BE%D0%BB%D1%8F-%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D0%BE%D0%B2-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0-ncbi) ПОЛЯ ЗАПРОСОВ ПОИСКА NCBI
@@ -116,13 +116,30 @@ alt="BLAST" width="360" border="5" />
 * портал [CIPRES: Cyberinfrastructure for Phylogenetic Research](https://www.phylo.org/)
 * необходимо создать аккаунт и подтвердить его
 
-### 1А. Импорт объединенной матрицы с выравниванием в формат MEGA
+### 2А. Импорт объединенной матрицы с выравниванием в формат MEGA
 1. Откройте [MEGA X](http://www.megasoftware.net/)
 2. В верхней панели меню **File** выберите **Convert file format to MEGA**
 3. Укажите [bears.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.nex)
 4. Сохраните новый файл [bears.meg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.meg)
 5. Выйдите из **MEGA _File Editor and Format Converter_**
 6. Откройте меню **Data** и выберите **Open a File**, чтобы открыть [bears.meg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.meg)
+
+### 2Б. Метод максимальной парсимонии (MP - Maximum Parsimony)
+1. Откройте меню **Phylogeny** и выберите **Construct/Test Maximum Parsimony Tree**
+2. Установите *100 replicates* в **bootstrap test** 
+3. Установите **gaps** в *complete deletion*
+4. Установите **SPR** в *tree search method*
+5. Запустите анализ
+6. После завершения укорените дерево, используя внешнюю группу
+7. Сохраните дерево в формате png:
+![Maximum Parsimony Tree](../master/LAB2/bears_parsimony.png)
+
+#### ЗАДАНИЯ (МАКСИМАЛЬНАЯ ПАРСИМОНИЯ):
+  * Как оригинальное дерево отличается от консенсусного бутстреп дерева?
+  * Запустите MP анализ с большим числом бутстреп репликаций. Как изменились значения поддержки ветвей?
+  * Запустите MP анализ, выбрав только 1ю и 2ю позиции в кодоне. Как изменились топология дерева и поддержка ветвей?
+  * Запустите MP анализ, выбрав другие методы поиска деревьев. Как изменились топология дерева и поддержка ветвей?
+  * Запустите MP анализ для каждого гена отдельно (используйте файлы *.fasta). Как различаются топологии деревьев и поддержки ветвей между генными деревьями?
 
 
 
