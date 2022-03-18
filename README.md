@@ -8,7 +8,7 @@
   2. [ЗАДАНИЯ: ДИСТАНЦИОННЫЕ МЕТОДЫ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B4%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D1%8B)
   3. [ЗАДАНИЯ: ВЫБОР МОДЕЛИ НУКЛЕОТИДНЫХ ЗАМЕН](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B2%D1%8B%D0%B1%D0%BE%D1%80-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8-%D0%BD%D1%83%D0%BA%D0%BB%D0%B5%D0%BE%D1%82%D0%B8%D0%B4%D0%BD%D1%8B%D1%85-%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD)
   4. [ЗАДАНИЯ: ПОИСК ОПТИМАЛЬНОГО РАЗДЕЛА](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D0%BE%D0%BF%D1%82%D0%B8%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE-%D1%80%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%D0%B0)
-  5. [ЗАДАНИЯ: ПОСТРОЕНИЕ ДЕРЕВЬЕВ](https://github.com/vinni-bio/WS-20160909#homework-questions-likelihood-and-bayesian-methods)
+  5. [ЗАДАНИЯ: ПОСТРОЕНИЕ ФИЛОГЕНЕТИЧЕСКИХ ДЕРЕВЬЕВ](https://github.com/vinni-bio/WS-20160909#homework-questions-likelihood-and-bayesian-methods)
 * [ПРИЛОЖЕНИЕ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B1%D0%B0%D0%B7%D1%8B-%D0%B3%D0%B5%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85) БАЗЫ ГЕНЕТИЧЕСКИХ ДАННЫХ 
 * [ПРИЛОЖЕНИЕ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B1%D0%B0%D0%B7%D1%8B-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-ncbi) БАЗЫ ДАННЫХ NCBI
 * [ПРИЛОЖЕНИЕ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%BF%D0%BE%D0%BB%D1%8F-%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D0%BE%D0%B2-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0-ncbi) ПОЛЯ ЗАПРОСОВ ПОИСКА NCBI
@@ -178,7 +178,7 @@ alt="BLAST" width="360" border="5" />
   * Какую модель нуклеотидных замен вы выбрали для последующей реконструкции филогенетического дерева? Постарайтесь объяснить почему.
   * Как различаются выбранные модели нуклеотидных замен для генов *irbp* и *cytb*?
 
-### 2Д. ПОИСК ОПТИМАЛЬНОГО РАЗДЕЛА В [PartitionFinder](https://github.com/brettc/partitionfinder/releases/tag/v2.1.1)
+### 2Д. ПОИСК ОПТИМАЛЬНОГО РАЗДЕЛА в [PartitionFinder](https://github.com/brettc/partitionfinder/releases/tag/v2.1.1)
 1. Откройте папку `partitionfinder-2.1.1/examples/nucleotide/` и скопируйте из нее файл `partition_finder.cfg` в вашу рабочую директорию
 2. Откройте файл  `partition_finder.cfg` в текстовом редакторе (например, Notepad++ или SUBLIME)
 3. Измените `test.phy` в `bears.phy` (ваш файл с выравниванием)
@@ -206,7 +206,103 @@ alt="BLAST" width="360" border="5" />
   * Сколько оптимальных разделов было выбрано для исследуемой матрицы выравнивания?
   * Как соотносятся оптимальные модели нуклеотидных замен выбранных разделов с теми, что были выбраны для генов в jmodeltest?
 
+### 2Е. МЕТОД МАКСИМАЛЬНОГО ПРАВДОПОДОБИЯ (ML - Maximum Likelihood Analysis) в RAxML
 
+<p><b>Руководство для запуска RAxML из командной строки:</b></p>
+
+1. Напечатайте в терминале `raxmlHPC -help` чтобы увидеть все команды и настройки RAxML
+2. Реконструкция наиболее оптимальных ML деревьев с помощью парсимониального подхода:<br/>
+`raxmlHPC -s bears.phy -q partitions.txt -m GTRGAMMA -p 12345 -n bears_ML -# 20`
+3. Реконструкция 100 бутстреп репликаций :</br>
+`raxmlHPC -s bears.phy -q partitions.txt -m GTRGAMMA -p 12345 -b 12345 -n bears_boot -# 100`
+4. Объединение бутстреп и ML деревьев:<br/>
+`raxmlHPC -f b -t RAxML_bestTree.bears_ML -z RAxML_bootstrap.bears_boot -m GTRGAMMA -p 12345 -n bears_final`
+5. Откройте полученное филогенетическое дерево `RAxML_bipartitions.bears_final` в программе FigTree<br/>
+
+<p><b>Руководство для запуска RAxML из CIPRES:</b></p>
+
+1. Перейдите в портал CIPRES по ссылке: https://www.phylo.org
+2. Нажмите ![Use the CIPRES Science Gateway](http://www.phylo.org/images/interface/blue-button.png)
+3. Зарегистрируйтесь и войдите в свой аккаунт
+4. Создайте папку **RAxML**
+4. Перейдите в директорию **Data** и нажмите **Upload/Enter Data** 
+5. Загрузите файлы [bears.phy](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.phy) и [partitions.txt](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partitions.txt) 
+6. Перейдите в директорию **Task** и нажмите **Create New Task**
+7. Выберите [bears.phy](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.phy) как **input data**
+8. Выберите **RAxML-HPC v.8 on XSEDE** как tool и перейдите в настройки параметров
+9. В разделе **Simple parameters** :
+	* Укажите название результата вместо result (-n): `bears_ML`
+	* Укажите название файла с разделами (-q): `partitions.txt`
+10. В разделе **Advanced parameters** перейдите к **Configure the Analysis**:
+	* Поставьте галку на **specify the number of alternative runs**  (-N)
+	* Укажите **number of alternative runs** (-N): `20`
+11. Сохраните параметры и выйдите в меню задачи
+12. Дайте название задаче в разделе **description** (например, BEARS-ML) и нажмите **Save and Run Task**
+13. Нажмите снова **Create New Task**
+14. Снова выберите [bears.phy](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.phy) как **input data**
+15. Снова выберите **RAxML-HPC v.8 on XSEDE** как tool
+16. В разделе **Simple parameters** :
+	* Укажите название результата вместо result (-n): `bears_boot`
+	* Укажите название файла с разделами (-q): `partitions.txt`
+17. В разделе **Advanced parameters** перейдите к **Configure Bootstrapping**:
+	* Выберите **Non-parametric Boostrapping (-b)**
+	* Введите число бутстреп итераций (-N): `100`
+18. Сохраните параметры и выйдите в меню задачи
+19. Дайте название задаче в разделе **description** (например, BEARS-BOOTSTRAP) и нажмите **Save and Run Task**
+20. Сохраните из OUTPUT результаты в виде файлов `RAxML_bestTree.bears_ML` и `RAxML_bootstrap.bears_boot`
+21. Перейдите в директорию **Data** и нажмите **Upload/Enter Data** 
+22. Загрузите файлы с результатами `RAxML_bestTree.bears_ML` и `RAxML_bootstrap.bears_boot` 
+23. Перейдите в директорию **Task** и нажмите **Create New Task**
+24. Снова выберите [bears.phy](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.phy) as your input data
+25. Снова выберите **RAxML-HPC v.8 on XSEDE** как tool
+26. В разделе **Simple parameters**:
+	* Укажите название результата вместо result (-n): `bears_final`
+	* Укажите файл с ML деревом (-t): `RAxML_bestTree.bears_ML`
+27. В разделе **Advanced parameters** перейдите к **Configure the Analysis**:
+	* Выберите тип анализа: `Draw bipartitions onto a single tree topology (-f b)`
+	* Укажите файл с бутстреп результатами (-z): `RAxML_bootstrap.bears_boot`
+28. Сохраните параметры и выйдите в меню задачи
+26. Дайте название задаче в разделе **description** (например, BEARS-FINAL) и нажмите **Save and Run Task**
+27. Сохраните дерево [RAxML_bipartitions.bears_final](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/RAxML_bipartitions.bears_final.txt) и откройте его в FigTree <br/>
+![ML дерево, построенное в RAxML](https://github.com/vinni-bio/WS-20160909/blob/master/LAB2/bears_ML.png)
+
+### G. Bayesian analysis with MrBayes
+1. Start **MrBayes** program by typing `mb` in Mac Os terminal or by executing *mrbayes.exe* program in Windows
+2. To read the help menu, type `MrBayes > help`
+3. Read the file with multiple sequence alignment:<br/>
+`MrBayes > execute LAB2/bears.nex`
+4. Define gene partitions in your sequences:
+<pre><code>MrBayes > charset cytb = 1-1140
+MrBayes > charset irbp = 1141-2420
+MrBayes > partition by_gene = 2: cytb,irbp
+MrBayes > set partition = by_gene</code></pre>
+5. Define the outgroup: <br/>
+`MrBayes > outgroup Panthera_pardus`
+6. Check the default model settings:<br/>
+`MrBayes > showmodel`<br/>
+or<br/>
+`MrBayes > help lset`
+7. Change the model settings for each partition:
+<pre><code>MrBayes > lset applyto=(1) code=vertmt nst=2 rates=gamma
+MrBayes > lset applyto=(2) nst=2 rates=gamma</code></pre>
+8. Check the default prior settings:<br/>
+`MrBayes > help prset`
+9. Change the prior settings for each partition:<br/>
+<pre><code>MrBayes > unlink statefreq=(all) shape=(all) revmat=(all)
+MrBayes > prset applyto=(1) shapepr = exponential(10.0)</code></pre>
+10. Check the default mcmc settings:<br/>
+`MrBayes > help mcmcp`
+11. Change the mcmc settings
+`MrBayes > mcmcp ngen=1000000 nruns=2 nchains=2 samplefreq=200 burninfrac=0.2`
+12. Run the mcmc search:<br/>
+`MrBayes > mcmc`
+13. Summarize the mcmc search information and build the tree:
+<pre><code>MrBayes > sump
+MrBayes > sumt</code></pre>
+14. Quit the MrBayes program<br/>
+`MrBayes > quit`
+15. Open the consensus tree [bears.nex.con.tre](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.nex.con.tre) in FigTree
+![Bayesian tree reconstructed with MrBayes](https://github.com/vinni-bio/WS-20160909/blob/master/LAB2/bears_BA.png)
 
 ## ПРИЛОЖЕНИЯ
 
