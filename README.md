@@ -132,7 +132,7 @@ alt="BLAST" width="360" border="5" />
 5. Запустите анализ
 6. После завершения укорените дерево, используя внешнюю группу
 7. Сохраните дерево в формате png:
-![Maximum Parsimony Tree](../master/LAB2/bears_parsimony.png)
+![Maximum Parsimony Tree](https://github.com/vinni-bio/WS-20160909/blob/master/LAB2/bears_parsimony.png)
 
 #### ЗАДАНИЯ (МАКСИМАЛЬНАЯ ПАРСИМОНИЯ):
   * Как оригинальное дерево отличается от консенсусного бутстреп дерева?
