@@ -7,7 +7,7 @@
   1. [ЗАДАНИЯ: МАКСИМАЛЬНАЯ ПАРСИМОНИЯ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BC%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%BF%D0%B0%D1%80%D1%81%D0%B8%D0%BC%D0%BE%D0%BD%D0%B8%D1%8F)
   2. [ЗАДАНИЯ: ДИСТАНЦИОННЫЕ МЕТОДЫ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B4%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D1%8B)
   3. [ЗАДАНИЯ: ВЫБОР МОДЕЛИ НУКЛЕОТИДНЫХ ЗАМЕН](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B2%D1%8B%D0%B1%D0%BE%D1%80-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8-%D0%BD%D1%83%D0%BA%D0%BB%D0%B5%D0%BE%D1%82%D0%B8%D0%B4%D0%BD%D1%8B%D1%85-%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD)
-  4. [ЗАДАНИЯ: ПОИСК ОПТИМАЛЬНОГО РАЗДЕЛА](https://github.com/vinni-bio/WS-20160909#homework-questions-partition-analysis)
+  4. [ЗАДАНИЯ: ПОИСК ОПТИМАЛЬНОГО РАЗДЕЛА](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D0%BE%D0%BF%D1%82%D0%B8%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE-%D1%80%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%D0%B0)
   5. [ЗАДАНИЯ: ПОСТРОЕНИЕ ДЕРЕВЬЕВ](https://github.com/vinni-bio/WS-20160909#homework-questions-likelihood-and-bayesian-methods)
 * [ПРИЛОЖЕНИЕ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B1%D0%B0%D0%B7%D1%8B-%D0%B3%D0%B5%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85) БАЗЫ ГЕНЕТИЧЕСКИХ ДАННЫХ 
 * [ПРИЛОЖЕНИЕ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B1%D0%B0%D0%B7%D1%8B-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-ncbi) БАЗЫ ДАННЫХ NCBI
@@ -189,7 +189,7 @@ alt="BLAST" width="360" border="5" />
     irbp_pos1 = 1141-2420\3;
     irbp_pos2 = 1142-2420\3;
     irbp_pos3 = 1143-2420\3;</code></pre>
-5. Сохраните файл `partition_finder.cfg`, не изменяя его название в папке с файлами выравнивания:<br/>
+5. Сохраните файл `partition_finder.cfg`, не изменяя его название, в директорию с файлами выравнивания:<br/>
 [partition_finder.cfg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partition_finder.cfg)
 6. Откройте терминал (promt в Windows)
 7. Напечатайте `python` и нажмите пробел
@@ -198,8 +198,8 @@ alt="BLAST" width="360" border="5" />
 `python /Users/vinni/Desktop/PartitionFinder.py /Users/vinni/Desktop/LAB2/`
 10. Нажмите **ENTER**
 11. После завершения анализа у вас в директории появится новая папка **analysis**
-12. Чтобы увидеть результаты анализа откройте файл [best_scheme.txt](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/best_scheme.txt)
-13. Скопируйте и сохраните раздел RAxML в отдельный текстовый файл:<br/>
+12. Чтобы увидеть результаты анализа найдите и откройте в ней файл [best_scheme.txt](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/best_scheme.txt)
+13. Скопируйте и сохраните блок для RAxML в отдельный текстовый файл:<br/>
 [partitions.txt](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partitions.txt)
 
 #### ЗАДАНИЯ (ПОИСК ОПТИМАЛЬНОГО РАЗДЕЛА):
