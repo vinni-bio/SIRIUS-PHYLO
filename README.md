@@ -24,7 +24,7 @@
 * портал [CIPRES: Cyberinfrastructure for Phylogenetic Research](https://www.phylo.org/)
 * необходимо создать аккаунт и подтвердить его
 
-### A. Проверьте количество записей в Генном банке по исследуемой группе (например, медведи):
+### 1A. Проверьте количество записей в Генном банке по исследуемой группе (например, медведи):
 1. Зайдите на страницу Генного банка `http://www.ncbi.nlm.nih.gov`
 2. Найдите кнопку **All Resources**  в левом меню
 3. В списке баз данных выберите **Nucleotide Database**
@@ -34,7 +34,7 @@
 6. Добавьте исследуемую группу (`Ursidae`) и нажмите кнопку **add**
 7. Сколько записей относится к исследуемой группе?
 
-### Б. Загрузите на свой компьютер записи исследуемой группы для анализа:
+### 1Б. Загрузите на свой компьютер записи исследуемой группы для анализа:
 1. Зайдите снова в Генный банк (**Nucleotide Database**)
 2. В поисковой строке введите запрос `"Yu L"[AUTH] AND Ursidae[ORGN] AND irbp[TITL]`
 3. Сохраните последовательности в формате 'FASTA':<br/>
@@ -43,7 +43,7 @@
 5. Сохраните последовательности в формате 'FASTA':<br/>
 [cytb-ursidae.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb-ursidae.fasta)
 
-### В. Выбор внешней группы
+### 1В. Выбор внешней группы
 1. Откройте вкладку **Resources** в верхнем меню
 2. Выберите **Sequence Analysis** и нажмите **_BLAST (Basic Local Alignment Search Tool)_**
 3. Выберите <br/><img src="https://blast.ncbi.nlm.nih.gov/images/nucleutide-blast-cover.png" 
@@ -63,7 +63,7 @@ alt="BLAST" width="360" border="5" />
 13. Сохраните внешнюю группу по гену *cytb* в отдельный файл в формате 'FASTA':<br/>
 [cytb-outgroup.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb-outgroup.fasta)
 
-### Г. Выравнивание множественных последовательностей алгоритмом MUSCLE в MEGA
+### 1Г. Выравнивание множественных последовательностей алгоритмом MUSCLE в MEGA
 1. Запустите программу [MEGA X](http://www.megasoftware.net/)
 2. Откройте меню **Data** и выберите **Open a File**, чтобы открыть файл [cytb-ursidae.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb-ursidae.fasta)
 3. Выберите меню **Edit** и нажмите **Insert sequence from file**, чтобы вставить последовательность `cytb-outgroup.fasta`
@@ -75,7 +75,7 @@ alt="BLAST" width="360" border="5" />
 8. Повторите ту же самую процедуру для гена *irbp* :<br/>
 [irbp.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp.fasta)
 
-### Д. Конвертация формата последовательностей и объединение последовательностей 
+### 1Д. Конвертация формата последовательностей и объединение последовательностей 
 1. Запустите программу [Sequence Matrix](http://gaurav.github.io/taxondna/) program
 2. Перетащите в окно программы файл [irbp.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp.fasta) 
 3. Выберите **Use species names**
@@ -96,7 +96,7 @@ alt="BLAST" width="360" border="5" />
 12. Сохраните последовательности в формате Phylip (RAxML)<br/>
 [bears.phy](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.phy)
 
-### E. Ознакомьтесь с функцией белка *irbp* в базе данных UniProt 
+### 1E. Ознакомьтесь с функцией белка *irbp* в базе данных UniProt 
 1. Зайдите на страницу http://www.uniprot.org/
 2. В меню поиска, введите:<br/>
 `name:"interphotoreceptor retinoid binding"`
@@ -111,6 +111,19 @@ alt="BLAST" width="360" border="5" />
 * [PartitionFinder v2.1.1](https://github.com/brettc/partitionfinder/releases/tag/v2.1.1)
 * [MrBayes v.3.2.7](https://nbisweden.github.io/MrBayes/download.html)
 * [FigTree v.1.4.4](https://github.com/rambaut/figtree/releases)
+
+### РЕГИСТРАЦИЯ В CIPRES
+* портал [CIPRES: Cyberinfrastructure for Phylogenetic Research](https://www.phylo.org/)
+* необходимо создать аккаунт и подтвердить его
+
+### 1А. Импорт объединенной матрицы с выравниванием в формат MEGA
+1. Откройте [MEGA X](http://www.megasoftware.net/)
+2. В верхней панели меню **File** выберите **Convert file format to MEGA**
+3. Укажите [bears.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.nex)
+4. Сохраните новый файл [bears.meg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.meg)
+5. Выйдите из **MEGA _File Editor and Format Converter_**
+6. Откройте меню **Data** и выберите **Open a File**, чтобы открыть [bears.meg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.meg)
+
 
 
 ## ПРИЛОЖЕНИЯ
