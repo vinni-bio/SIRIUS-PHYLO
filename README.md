@@ -262,47 +262,48 @@ alt="BLAST" width="360" border="5" />
 	* Выберите тип анализа: `Draw bipartitions onto a single tree topology (-f b)`
 	* Укажите файл с бутстреп результатами (-z): `RAxML_bootstrap.bears_boot`
 28. Сохраните параметры и выйдите в меню задачи
-26. Дайте название задаче в разделе **description** (например, BEARS-FINAL) и нажмите **Save and Run Task**
-27. Сохраните дерево [RAxML_bipartitions.bears_final](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/RAxML_bipartitions.bears_final.txt) и откройте его в FigTree <br/>
+29. Дайте название задаче в разделе **description** (например, BEARS-FINAL) и нажмите **Save and Run Task**
+30. Сохраните дерево [RAxML_bipartitions.bears_final](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/RAxML_bipartitions.bears_final.txt) и откройте его в FigTree <br/>
 ![ML дерево, построенное в RAxML](https://github.com/vinni-bio/WS-20160909/blob/master/LAB2/bears_ML.png)
 
-### G. Bayesian analysis with MrBayes
-1. Start **MrBayes** program by typing `mb` in Mac Os terminal or by executing *mrbayes.exe* program in Windows
-2. To read the help menu, type `MrBayes > help`
-3. Read the file with multiple sequence alignment:<br/>
+### 2Ж. БАЙЕСОВСКИЙ АНАЛИЗ в MrBayes (BI - bayesian inference)
+0. Установите **MrBayes**
+1. Запустите **MrBayes** через `mb` в терминале Mac Os или просто запуском *mrbayes.exe* в Windows
+2. Чтобы читать справку `MrBayes` введите `help`
+3. Загрузите [файл](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.nex) с выровненными последовательностями:<br/>
 `MrBayes > execute LAB2/bears.nex`
-4. Define gene partitions in your sequences:
+4. Укажите разделы матрицы последовательностей, соответствующие генам:
 <pre><code>MrBayes > charset cytb = 1-1140
 MrBayes > charset irbp = 1141-2420
 MrBayes > partition by_gene = 2: cytb,irbp
 MrBayes > set partition = by_gene</code></pre>
-5. Define the outgroup: <br/>
+5. Определите внешнюю группу: <br/>
 `MrBayes > outgroup Panthera_pardus`
-6. Check the default model settings:<br/>
+6. Проверьте параметры модели, выставленные по умолчанию:<br/>
 `MrBayes > showmodel`<br/>
-or<br/>
+или<br/>
 `MrBayes > help lset`
-7. Change the model settings for each partition:
+7. Для каждого раздела укажите необходимые параметры модели:
 <pre><code>MrBayes > lset applyto=(1) code=vertmt nst=2 rates=gamma
 MrBayes > lset applyto=(2) nst=2 rates=gamma</code></pre>
-8. Check the default prior settings:<br/>
+8. Проверьте параметры априорной вероятности в модели, выставленные по умолчанию:<br/>
 `MrBayes > help prset`
-9. Change the prior settings for each partition:<br/>
+9. Для каждого раздела укажите необходимые априорные вероятности:<br/>
 <pre><code>MrBayes > unlink statefreq=(all) shape=(all) revmat=(all)
 MrBayes > prset applyto=(1) shapepr = exponential(10.0)</code></pre>
-10. Check the default mcmc settings:<br/>
+10. Проверьте mcmc установки, выставленные по умолчанию:<br/>
 `MrBayes > help mcmcp`
-11. Change the mcmc settings
+11. Укажите mcmc установки:<br/>
 `MrBayes > mcmcp ngen=1000000 nruns=2 nchains=2 samplefreq=200 burninfrac=0.2`
-12. Run the mcmc search:<br/>
+12. Запустите mcmc поиск оптимального дерева:<br/>
 `MrBayes > mcmc`
-13. Summarize the mcmc search information and build the tree:
+13. Получите результаты mcmc поиск оптимального дерева и постройте его:
 <pre><code>MrBayes > sump
 MrBayes > sumt</code></pre>
-14. Quit the MrBayes program<br/>
+14. Выйдите из программы MrBayes<br/>
 `MrBayes > quit`
-15. Open the consensus tree [bears.nex.con.tre](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.nex.con.tre) in FigTree
-![Bayesian tree reconstructed with MrBayes](https://github.com/vinni-bio/WS-20160909/blob/master/LAB2/bears_BA.png)
+15. Откройте консенсусное дерево [bears.nex.con.tre](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.nex.con.tre) in FigTree
+![Байесовское дерево, построенное в MrBayes](https://github.com/vinni-bio/WS-20160909/blob/master/LAB2/bears_BA.png)
 
 ## ПРИЛОЖЕНИЯ
 
