@@ -209,17 +209,6 @@ alt="BLAST" width="360" border="5" />
 
 ### 2Е. Метод максимального правдоподобия (ML - Maximum Likelihood Analysis) в RAxML
 
-<p><b>Руководство для запуска RAxML из командной строки:</b></p>
-
-1. Напечатайте в терминале `raxmlHPC -help` чтобы увидеть все команды и настройки RAxML
-2. Реконструкция наиболее оптимальных ML деревьев с помощью парсимониального подхода:<br/>
-`raxmlHPC -s bears.phy -q partitions.txt -m GTRGAMMA -p 12345 -n bears_ML -# 20`
-3. Реконструкция 100 бутстреп репликаций :</br>
-`raxmlHPC -s bears.phy -q partitions.txt -m GTRGAMMA -p 12345 -b 12345 -n bears_boot -# 100`
-4. Объединение бутстреп и ML деревьев:<br/>
-`raxmlHPC -f b -t RAxML_bestTree.bears_ML -z RAxML_bootstrap.bears_boot -m GTRGAMMA -p 12345 -n bears_final`
-5. Откройте полученное филогенетическое дерево `RAxML_bipartitions.bears_final` в программе FigTree<br/>
-
 <p><b>Руководство для запуска RAxML из CIPRES:</b></p>
 
 1. Перейдите в портал CIPRES по ссылке: https://www.phylo.org
@@ -266,6 +255,18 @@ alt="BLAST" width="360" border="5" />
 29. Дайте название задаче в разделе **description** (например, BEARS-FINAL) и нажмите **Save and Run Task**
 30. Сохраните дерево [RAxML_bipartitions.bears_final](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/RAxML_bipartitions.bears_final.txt) и откройте его в FigTree <br/>
 ![ML дерево, построенное в RAxML](https://github.com/vinni-bio/WS-20160909/blob/master/LAB2/bears_ML.png)
+
+<p><b>Руководство для запуска [RAxML](https://github.com/stamatak/standard-RAxML) из командной строки (АЛЬТЕРНАТИВА)</b></p>
+
+1. Напечатайте в терминале `raxmlHPC -help` чтобы увидеть все команды и настройки RAxML
+2. Реконструкция наиболее оптимальных ML деревьев с помощью парсимониального подхода:<br/>
+`raxmlHPC -s bears.phy -q partitions.txt -m GTRGAMMA -p 12345 -n bears_ML -# 20`
+3. Реконструкция 100 бутстреп репликаций :</br>
+`raxmlHPC -s bears.phy -q partitions.txt -m GTRGAMMA -p 12345 -b 12345 -n bears_boot -# 100`
+4. Объединение бутстреп и ML деревьев:<br/>
+`raxmlHPC -f b -t RAxML_bestTree.bears_ML -z RAxML_bootstrap.bears_boot -m GTRGAMMA -p 12345 -n bears_final`
+5. Откройте полученное филогенетическое дерево `RAxML_bipartitions.bears_final` в программе FigTree<br/>
+
 
 ### 2Ж. Байесовский анализ в MrBayes (BI - bayesian inference)
 0. Установите [**MrBayes**](https://nbisweden.github.io/MrBayes/download.html)
