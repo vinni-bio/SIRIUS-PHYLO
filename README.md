@@ -4,6 +4,11 @@
 ## СОДЕРЖАНИЕ
 * [ПРАКТИКА #1.](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0-1-%D0%B2%D1%8B%D1%80%D0%B0%D0%B2%D0%BD%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B5%D0%B9) ВЫРАВНИВАНИЕ ПОСЛЕДОВАТЕЛЬНОСТЕЙ
 * [ПРАКТИКА #2.](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0-2-%D0%B2%D1%8B%D0%B1%D0%BE%D1%80-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8-%D0%B8-%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5-%D1%84%D0%B8%D0%BB%D0%BE%D0%B3%D0%B5%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D1%8C%D0%B5%D0%B2) ВЫБОР МОДЕЛИ И ПОСТРОЕНИЕ ФИЛОГЕНЕТИЧЕСКИХ ДЕРЕВЬЕВ
+  1. [ДЗ МАКСИМАЛЬНАЯ ПАРСИМОНИЯ](https://github.com/vinni-bio/WS-20160909#homework-questions-maximum-parsimony)
+  2. [ДЗ ДИСТАНЦИОННЫЕ МЕТОДЫ](https://github.com/vinni-bio/WS-20160909#homework-questions-distance-matrix-methods)
+  3. [ДЗ ВЫБОР ЭВОЛЮЦИОННОЙ МОДЕЛИ](https://github.com/vinni-bio/WS-20160909#homework-questions-model-selection)
+  4. [ДЗ ВЫБОР PARTITIONS](https://github.com/vinni-bio/WS-20160909#homework-questions-partition-analysis)
+  5. [ДЗ ПОСТРОЕНИЕ ДЕРЕВЬЕВ](https://github.com/vinni-bio/WS-20160909#homework-questions-likelihood-and-bayesian-methods)
 * [ПРИЛОЖЕНИЕ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B1%D0%B0%D0%B7%D1%8B-%D0%B3%D0%B5%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85) БАЗЫ ГЕНЕТИЧЕСКИХ ДАННЫХ 
 * [ПРИЛОЖЕНИЕ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%B1%D0%B0%D0%B7%D1%8B-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-ncbi) БАЗЫ ДАННЫХ NCBI
 * [ПРИЛОЖЕНИЕ](https://github.com/vinni-bio/SIRIUS-PHYLO#%D0%BF%D0%BE%D0%BB%D1%8F-%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D0%BE%D0%B2-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0-ncbi) ПОЛЯ ЗАПРОСОВ ПОИСКА NCBI
@@ -100,6 +105,12 @@ alt="BLAST" width="360" border="5" />
 
 ## ПРАКТИКА #2. ВЫБОР МОДЕЛИ И ПОСТРОЕНИЕ ФИЛОГЕНЕТИЧЕСКИХ ДЕРЕВЬЕВ
 
+### НЕОБХОДИМЫЕ ПРОГРАММЫ
+* [MEGA X](http://www.megasoftware.net/)
+* [jModelTest v2.1.10](https://github.com/ddarriba/jmodeltest2/releases)
+* [PartitionFinder v2.1.1](https://github.com/brettc/partitionfinder/releases/tag/v2.1.1)
+* [MrBayes v.3.2.7](https://nbisweden.github.io/MrBayes/download.html)
+* [FigTree v.1.4.4](https://github.com/rambaut/figtree/releases)
 
 
 ## ПРИЛОЖЕНИЯ
