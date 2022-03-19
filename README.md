@@ -180,28 +180,36 @@ alt="BLAST" width="360" border="5" />
   * Как различаются выбранные модели нуклеотидных замен для генов *irbp* и *cytb*?
 
 ### 2Д. Поиск оптимального раздела в [PartitionFinder](https://github.com/brettc/partitionfinder/releases/tag/v2.1.1)
-1. Откройте папку `partitionfinder-2.1.1/examples/nucleotide/` и скопируйте из нее файл `partition_finder.cfg` в вашу рабочую директорию
-2. Откройте файл  `partition_finder.cfg` в текстовом редакторе (например, Notepad++ или SUBLIME)
-3. Измените `test.phy` в `bears.phy` (ваш файл с выравниванием)
-4. Измените секцию с разделами `[data_blocks]` на следующее:
+1. Откройте окно терминала (prompt в Windows)
+2. Проверьте наличие conda `conda --version`
+3. Создайте среду для Python2:<br/>
+`conda create --name python2 python=2.7 numpy pandas pytables pyparsing scipy`
+4. Активируйте среду `conda activate python2`
+5. Установите дополнительный пакет `pip install sklearn`
+6. Скачайте дистрибутив [PartitionFinder](https://github.com/brettc/partitionfinder/releases/tag/v2.1.1)
+7. Разархивируйте и откройте папку `partitionfinder-2.1.1/examples/nucleotide/` и скопируйте из нее файл `partition_finder.cfg` в вашу рабочую директорию
+8. Откройте файл  `partition_finder.cfg` в текстовом редакторе (например, Notepad++ или SUBLIME)
+9. Измените `test.phy` в `bears.phy` (ваш файл с выравниванием)
+10. Выберите поиск всех моделей: `models = all;`
+11. Измените секцию с разделами `[data_blocks]` на следующее:
 <pre><code>    cytb_pos1 = 1-1140\3;
     cytb_pos2 = 2-1140\3;
     cytb_pos3 = 3-1140\3;
     irbp_pos1 = 1141-2420\3;
     irbp_pos2 = 1142-2420\3;
     irbp_pos3 = 1143-2420\3;</code></pre>
-5. Сохраните файл `partition_finder.cfg`, не изменяя его название, в директорию с файлами выравнивания:<br/>
+12. Сохраните файл `partition_finder.cfg`, не изменяя его название, в директорию с файлами выравнивания:<br/>
 [partition_finder.cfg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partition_finder.cfg)
-6. Откройте терминал (promt в Windows)
-7. Напечатайте `python` и нажмите пробел
-8. Перетащите в окно терминала файл `PartitionFinder.py` и нажмите пробел
-9. Перетащите в окно терминала папку, где лежат файлы выравнивания и файл `partition_finder.cfg` [partition_finder.cfg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partition_finder.cfg). <br/>По итогу должно получиться что-то похожее на:<br/>
+13. Напечатайте `python` и нажмите пробел
+14. Перетащите в окно терминала файл `PartitionFinder.py` и нажмите пробел
+15. Перетащите в окно терминала папку, где лежат файлы выравнивания и файл `partition_finder.cfg` [partition_finder.cfg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partition_finder.cfg). <br/>По итогу должно получиться что-то похожее на:<br/>
 `python /Users/vinni/Desktop/PartitionFinder.py /Users/vinni/Desktop/LAB2/`
-10. Нажмите **ENTER**
-11. После завершения анализа у вас в директории появится новая папка **analysis**
-12. Чтобы увидеть результаты анализа найдите и откройте в ней файл [best_scheme.txt](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/best_scheme.txt)
-13. Скопируйте и сохраните блок для RAxML в отдельный текстовый файл:<br/>
+16. Нажмите **ENTER**
+17. После завершения анализа у вас в директории появится новая папка **analysis**
+18. Чтобы увидеть результаты анализа найдите и откройте в ней файл [best_scheme.txt](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/best_scheme.txt)
+19. Скопируйте и сохраните блок для RAxML в отдельный текстовый файл:<br/>
 [partitions.txt](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partitions.txt)
+20. Деактивируйте среду `conda deactivate`
 
 #### ЗАДАНИЯ (ПОИСК ОПТИМАЛЬНОГО РАЗДЕЛА):
   * Сколько оптимальных разделов было выбрано для исследуемой матрицы выравнивания?
